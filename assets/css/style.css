@@ -11,7 +11,7 @@
     transform-style: preserve-3d;
     height: 400px;
     width: 500px;
-    transform: perspective(900) rotateX(10deg) translateZ(-480px);
+    transform: perspective(900) rotateX(20deg) translateZ(-480px);
 }
 
 .polygone .face{
@@ -19,7 +19,7 @@
     width: 500px;
     position: absolute;
     backface-visibility: visible;
-    background-color: rgba(150, 150, 150, 0.8);
+    background-color: rgba(200, 200, 200, 0.8);
 }
 
 .polygone .face img{
@@ -46,4 +46,40 @@
 }
 .polygone #area-5{
     transform: rotateY(-120deg) translateZ(450px);
+}
+
+.polygone .face-back{
+    height: 381px;
+    width: 481px;
+    margin-left: 10px;
+    margin-top: 10px;
+    position: absolute;
+    backface-visibility: visible;
+    background-color: rgb(200, 200, 200);
+}
+
+
+.polygone #area-0-back{
+    transform: translateZ(449px);
+    background-color: rgba(200, 50, 200, 1);
+}
+.polygone #area-1-back{
+    transform: rotateY(60deg) translateZ(449px);
+    background-color: rgba(200, 50, 50, 1);
+}
+.polygone #area-2-back{
+    transform: rotateY(120deg) translateZ(449px);
+    background-color: rgba(200, 200, 50, 1);
+}
+.polygone #area-3-back{
+    transform: rotateY(180deg) translateZ(449px);
+    background-color: rgba(50, 200, 50, 1);
+}
+.polygone #area-4-back{
+    transform: rotateY(-60deg) translateZ(449px);
+    background-color: rgba(50, 200, 200, 1);
+}
+.polygone #area-5-back{
+    transform: rotateY(-120deg) translateZ(449px);
+    background-color: rgba(50, 50, 200, 1);
 }
