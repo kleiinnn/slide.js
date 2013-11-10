@@ -1,0 +1,49 @@
+
+.content{
+    position: absolute;
+    margin-left: 400px;
+    margin-top: 200px;
+}
+
+.polygone{
+    position: absolute;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    height: 400px;
+    width: 500px;
+    transform: perspective(900) rotateX(10deg) translateZ(-480px);
+}
+
+.polygone .face{
+    height: 400px;
+    width: 500px;
+    position: absolute;
+    backface-visibility: visible;
+    background-color: rgba(150, 150, 150, 0.8);
+}
+
+.polygone .face img{
+    height: 380px;
+    width: 480px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.polygone #area-0{
+    transform: translateZ(450px);
+}
+.polygone #area-1{
+    transform: rotateY(60deg) translateZ(450px);
+}
+.polygone #area-2{
+    transform: rotateY(120deg) translateZ(450px);
+}
+.polygone #area-3{
+    transform: rotateY(180deg) translateZ(450px);
+}
+.polygone #area-4{
+    transform: rotateY(-60deg) translateZ(450px);
+}
+.polygone #area-5{
+    transform: rotateY(-120deg) translateZ(450px);
+}
