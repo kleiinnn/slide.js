@@ -1,6 +1,6 @@
 var slideShowContainer = $('#slideshow-container');
 var picturePrefix = "./assets/img/";
-var radius = 500;
+var radius = 700;
 
 var pictures = new Array(
 	"unsplash_5248748fb40ac_1.JPG",
@@ -8,7 +8,13 @@ var pictures = new Array(
 	"unsplash_5249ec183ab2c_1.JPG",
 	"unsplash_5263607dd1bfc_1.JPG",
 	"unsplash_5252b10dacd20_1.JPG",
-	"unsplash_527bf5fd7f5f6_1.JPG"
+	"unsplash_527bf5fd7f5f6_1.JPG",
+	"unsplash_5269924c8ce7c_1.JPG",
+	"unsplash_5252bb51404f8_1.JPG",
+	"unsplash_525a7e89953d1_1.JPG",
+	"unsplash_52509afaba7b1_1.JPG",
+	"unsplash_5263605581e32_1.JPG",
+	"unsplash_5261cd0183e57_1.JPG"
 );
 
 function getFaceLength(pictureNum){
@@ -37,7 +43,7 @@ function addFaceElement(pictureUrl, pictureNum, pictureCount){
 		'<div style="transform: rotateY(' + getRotationAngle(pictureCount, pictureNum) + 'deg) translateZ(' + radius + 'px); width: ' + getFaceLength(pictureCount) + 'px; height: ' + getFaceHeight(pictureCount) + 'px;" class="face" id="face-' + pictureNum + '">' +
 		'<img src="' + picturePrefix + pictureUrl + '" style="width: ' + (getFaceLength(pictureCount) - 20) + 'px; height: ' + (getFaceHeight(pictureCount) - 20) + 'px;">' +
 		'</div>' +
-		'<div class="face-back" style="background-color: rgb(' +  Math.floor(Math.random() * (256 + 1)) + ', ' + Math.floor(Math.random() * (256 + 1)) + ', ' + Math.floor(Math.random() * (256 + 1)) + '); transform: rotateY(' + getRotationAngle(pictureCount, pictureNum) + 'deg) translateZ(' + (radius - 1)  + 'px); width: ' + (getFaceLength(pictureCount) - 18) + 'px; height: ' + (getFaceHeight(pictureCount) - 18) + 'px;" id="face-' + pictureNum + '-back"></div>' +
+		'<div class="face-back" style="background-color: rgb(' +  Math.floor(Math.random() * (256 + 1)) + ', ' + Math.floor(Math.random() * (256 + 1)) + ', ' + Math.floor(Math.random() * (256 + 1)) + '); transform: rotateY(' + getRotationAngle(pictureCount, pictureNum) + 'deg) translateZ(' + (radius - 1.2)  + 'px); width: ' + (getFaceLength(pictureCount) - 18) + 'px; height: ' + (getFaceHeight(pictureCount) - 18) + 'px;" id="face-' + pictureNum + '-back"></div>' +
 		'</div>'
 	);
 }

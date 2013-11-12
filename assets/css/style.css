@@ -9,7 +9,7 @@
     position: absolute;
     margin: 0 auto;
     transform-style: preserve-3d;
-    transform: perspective(900) rotateX(20deg) translateZ(-480px);
+    transform: perspective(900) rotateX(-20deg) translateZ(-480px);
 }
 
 .slideshow .face{
