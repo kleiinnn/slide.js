@@ -5,81 +5,29 @@
     margin-top: 200px;
 }
 
-.polygone{
+.slideshow{
     position: absolute;
     margin: 0 auto;
     transform-style: preserve-3d;
-    height: 400px;
-    width: 500px;
     transform: perspective(900) rotateX(20deg) translateZ(-480px);
 }
 
-.polygone .face{
-    height: 400px;
-    width: 500px;
+.slideshow .face{
     position: absolute;
 	backface-visibility: visible;
     background-color: rgba(200, 200, 200, 0.8);
 }
 
-.polygone .face img{
-    height: 380px;
-    width: 480px;
+.slideshow .face img{
     margin-left: 10px;
     margin-top: 10px;
 }
 
-.polygone #area-0{
-    transform: translateZ(450px);
-}
-.polygone #area-1{
-    transform: rotateY(60deg) translateZ(450px);
-}
-.polygone #area-2{
-    transform: rotateY(120deg) translateZ(450px);
-}
-.polygone #area-3{
-    transform: rotateY(180deg) translateZ(450px);
-}
-.polygone #area-4{
-    transform: rotateY(-60deg) translateZ(450px);
-}
-.polygone #area-5{
-    transform: rotateY(-120deg) translateZ(450px);
-}
 
-.polygone .face-back{
-    height: 381px;
-    width: 481px;
+.slideshow .face-back{
     margin-left: 10px;
     margin-top: 10px;
     position: absolute;
 	backface-visibility: visible;
     background-color: rgb(200, 200, 200);
-}
-
-
-.polygone #area-0-back{
-    transform: translateZ(449px);
-    background-color: rgba(200, 50, 200, 1);
-}
-.polygone #area-1-back{
-    transform: rotateY(60deg) translateZ(449px);
-    background-color: rgba(200, 50, 50, 1);
-}
-.polygone #area-2-back{
-    transform: rotateY(120deg) translateZ(449px);
-    background-color: rgba(200, 200, 50, 1);
-}
-.polygone #area-3-back{
-    transform: rotateY(180deg) translateZ(449px);
-    background-color: rgba(50, 200, 50, 1);
-}
-.polygone #area-4-back{
-    transform: rotateY(-60deg) translateZ(449px);
-    background-color: rgba(50, 200, 200, 1);
-}
-.polygone #area-5-back{
-    transform: rotateY(-120deg) translateZ(449px);
-    background-color: rgba(50, 50, 200, 1);
 }
