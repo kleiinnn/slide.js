@@ -76,6 +76,7 @@ function rotate(direction){
 }
 
 var autoslide = null;
+var mousewheel = true;
 //setInterval(rotate, 2000);
 
 $('#right-control').click(function(){
@@ -86,9 +87,6 @@ $('#left-control').click(function(){
 	rotate('right');
 });
 
-$(window).scroll(function(e){
-	
-});
 
 $('#autoslide').change(function(){
 	if(autoslide == null){
@@ -98,4 +96,16 @@ $('#autoslide').change(function(){
 		clearInterval(autoslide);
 		autoslide = null;
 	}
+});
+
+$(window).bind('mousewheel', function(event) {
+	var transform = $(".slideshow").css('transform');
+	if(mousewheel){
+	    if (event.originalEvent.wheelDelta >= 0) {
+	        $(".slideshow").css('transform', transform  + ' rotateY(2deg)');
+	    }
+	    else {
+	        $(".slideshow").css('transform', transform  + ' rotateY(-2deg)');
+	    }
+	}   
 });
