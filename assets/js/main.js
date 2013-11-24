@@ -1,6 +1,6 @@
 var slideShowContainer = $('#slideshow-container');
 var picturePrefix = "./assets/img/";
-var radius = 700;
+var radius = 600;
 
 var pictures = new Array(
 	"unsplash_5248748fb40ac_1.JPG",
@@ -54,24 +54,20 @@ for(var i = 0; i < pictures.length; i++){
 	addFaceElement(pictures[i], i+1, pictures.length);
 }
 //add global css
-console.log($('.slideshow .face').css('transfrom'));
-
-//$('.slideshow .face').attr('style', ($('.slideshow .face').attr('style') == undefined ? "" : $('.slideshow .face').attr('style')) + ' width: ' + getFaceLength(pictures.length+1) + 'px; height: ' + getFaceHeight(getFaceLength(pictures.length+1)) + 'px;');
 $('.slideshow').attr('style', ($('.slideshow').attr('style') == undefined ? "" : $('.slideshow').attr('style')) + ' width: ' + getFaceLength(pictures.length) + 'px; height: ' + getFaceHeight(getFaceLength(pictures.length)) + 'px;');
-//$('.slideshow .face img').attr('style', ($('.slideshow .face img').attr('style') == undefined ? "" : $('.slideshow .face img').attr('style')) + ' width: ' + (getFaceLength(pictures.length+1) - 20) + 'px; height: ' + (getFaceHeight(getFaceLength(pictures.length+1)) -20) + 'px;');
-//$('.slideshow .face-back').attr('style', ($('.slideshow .face-back').attr('style') == undefined ? "" : $('.slideshow .face-back').attr('style')) + ' width: ' + getFaceLength(pictures.length+1) + 'px; height: ' + getFaceHeight(getFaceLength(pictures.length+1)) + 'px;');
+
 
 
 
 var i = 0;
 
-function rotate(){
+function rotate(direction){
 	setTimeout(function(){
 		var transform = $(".slideshow").css('transform');
-		$(".slideshow").css('transform', transform  + ' rotateY(-1deg)');
+		$(".slideshow").css('transform', transform  + ' rotateY(' + (direction != 'left' ? '-1' : '1') + 'deg)');
 		i++;
 		if(i < getAbsoluteRotationAngle(pictures.length)){
-			rotate();
+			rotate(direction);
 		}
 		else{
 			i = 0;
@@ -79,4 +75,16 @@ function rotate(){
 	}, 10)
 }
 
-setInterval(rotate, 2000);
+//setInterval(rotate, 2000);
+
+$('#right-control').click(function(){
+	rotate('left');
+});
+
+$('#left-control').click(function(){
+	rotate('right');
+});
+
+$(window).scroll(function(e){
+	
+});

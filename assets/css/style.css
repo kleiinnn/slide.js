@@ -1,15 +1,18 @@
-
-.content{
-    position: absolute;
-    margin-left: 400px;
-    margin-top: 200px;
+.slide{
+	position: relative;
+	top: 200px;
+	max-width: 1200px;
+}
+.slide-show-content{
+    margin-left: 20px;
+	margin-right: 20px;
 }
 
 .slideshow{
-    position: absolute;
+    position: relative;
     margin: 0 auto;
     transform-style: preserve-3d;
-    transform: perspective(900) rotateX(-20deg) translateZ(-480px);
+    transform: perspective(900) rotateX(-10deg) translateZ(-480px);
 }
 
 .slideshow .face{
@@ -31,3 +34,22 @@
 	backface-visibility: visible;
     background-color: rgb(200, 200, 200);
 }
+
+.controls{
+	width: 120px;
+	height: 145px;
+}
+
+#right-control{
+	float:right;
+}
+
+#left-control{
+	float:left;
+}
+
+.controls img{
+	margin-left: auto;
+	display: block;
+}
+
