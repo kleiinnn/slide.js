@@ -58,3 +58,18 @@
 	display: block;
 }
 
+.autoslide{
+	width: 100px;
+	height: 25px;
+	margin: 0 auto;
+	background-color: rgba(200, 200, 200, 0.6);
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.autoslide span{
+	padding-left: 4px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	color: rgb(100, 100, 100);
+	position: relative;
+	top: 4px;
+}

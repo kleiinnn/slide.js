@@ -75,6 +75,7 @@ function rotate(direction){
 	}, 10)
 }
 
+var autoslide = null;
 //setInterval(rotate, 2000);
 
 $('#right-control').click(function(){
@@ -87,4 +88,14 @@ $('#left-control').click(function(){
 
 $(window).scroll(function(e){
 	
+});
+
+$('#autoslide').change(function(){
+	if(autoslide == null){
+		autoslide = setInterval(function(){rotate('left')}, 2000);
+	}
+	else{
+		clearInterval(autoslide);
+		autoslide = null;
+	}
 });
