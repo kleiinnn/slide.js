@@ -25,7 +25,8 @@
 		</div>
 		<script type="text/javascript">
 		var config;
-		var core;
+		var core = null;
+		var audio = null;
 		
 		
 		$(document).ready(function(){
@@ -70,6 +71,12 @@
 			}   
 		});
 		
+		$(document).on('click', '.audio-control', function(){
+			var array = $(this).attr('id').split('-');
+			var faceId = array[array.length-1] - 1;
+			audio.play(faceId);
+		});
+		
 		function init(){
 			require.setLibraryURI(config.directory + '/assets/js');
 			initModules();
@@ -79,6 +86,8 @@
 		function initModules(){
 			core = require('core.js');
 			core.init();
+			audio = require('audio.js');
+			audio.init();
 		}
 		
 		</script>
