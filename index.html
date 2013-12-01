@@ -3,10 +3,10 @@
     <head>
 		<title>slide.js</title>
 		<link type="text/css" rel="stylesheet" href="assets/css/style.css">
-		<script type="text/javascript" src="assets/js/require-kernel.js"></script>
-		<script type="text/javascript" src="assets/js/jquery-2.0.3.min.js"></script>
 		<script type="text/javascript" src="./assets/js/prefixfree.js"></script>
 		<script type="text/javascript" src="./assets/js/jquery.prefixfree.js"></script>
+		<script type="text/javascript" src="assets/js/require-kernel.js"></script>
+		<script type="text/javascript" src="assets/js/jquery-2.0.3.min.js"></script>
     </head>
     <body>
 		<div class="autoslide">
@@ -23,8 +23,65 @@
 				<img src="./assets/img/Right.svg" width="140">
 			</div>
 		</div>
-		<!-- Load JS at last -->
+		<script type="text/javascript">
+		var config;
+		var core;
 		
-		<script src="./assets/js/main.js"></script>
+		
+		$(document).ready(function(){
+			$.getJSON('config.json', function(json){
+				config = json;
+				init();
+			});
+		});
+		
+		var autoslide = null;
+
+		$('#right-control').click(function(){
+			core.rotate('left');
+		});
+
+		$('#left-control').click(function(){
+			core.rotate('right');
+		});
+
+
+		$('#autoslide').change(function(){
+			if(autoslide == null){
+				autoslide = setInterval(function(){
+					core.rotate('left');
+				}, 2000);
+			}
+			else{
+				clearInterval(autoslide);
+				autoslide = null;
+			}
+		});
+
+		$(window).bind('mousewheel', function(event) {
+			var transform = $(".slideshow").css('transform');
+			if(config.mousewheelSlide){
+			    if (event.originalEvent.wheelDelta >= 0) {
+			        $(".slideshow").css('transform', transform  + ' rotateY(2deg)');
+			    }
+			    else {
+			        $(".slideshow").css('transform', transform  + ' rotateY(-2deg)');
+			    }
+			}   
+		});
+		
+		function init(){
+			require.setLibraryURI(config.directory + '/assets/js');
+			initModules();
+			core.generateSlideshow();
+		}
+		
+		function initModules(){
+			core = require('core.js');
+			core.init();
+		}
+		
+		</script>
+		
 	</body>
 </html>
