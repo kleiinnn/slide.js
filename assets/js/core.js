@@ -2,20 +2,7 @@ var slideShowContainer = $('#slideshow-container');
 var picturePrefix = "./assets/img/";
 var radius = 600;
 
-var pictures = new Array(
-	"unsplash_5248748fb40ac_1.JPG",
-	"unsplash_5255bf45a4a45_1.JPG",
-	"unsplash_5249ec183ab2c_1.JPG",
-	"unsplash_5263607dd1bfc_1.JPG",
-	"unsplash_5252b10dacd20_1.JPG",
-	"unsplash_527bf5fd7f5f6_1.JPG",
-	"unsplash_5269924c8ce7c_1.JPG",
-	"unsplash_5252bb51404f8_1.JPG",
-	"unsplash_525a7e89953d1_1.JPG",
-	"unsplash_52509afaba7b1_1.JPG",
-	"unsplash_5263605581e32_1.JPG",
-	"unsplash_5261cd0183e57_1.JPG"
-);
+var pictures = new Array();
 
 function getFaceLength(pictureNum){
 	return Math.round(radius * 2 * Math.sin(Math.PI / pictureNum));
@@ -76,7 +63,7 @@ function rotate(direction){
 }
 
 var autoslide = null;
-var mousewheel = true;
+var mousewheel = false;
 //setInterval(rotate, 2000);
 
 $('#right-control').click(function(){
@@ -109,3 +96,4 @@ $(window).bind('mousewheel', function(event) {
 	    }
 	}   
 });
+

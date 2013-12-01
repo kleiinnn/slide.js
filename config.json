@@ -1,0 +1,68 @@
+{
+	"picturePrefix": "./assets/img/",
+	
+	"mousewheelSlide": false,
+	
+	"faces": [
+		{
+			"id": "0",
+			"picture": "unsplash_5248748fb40ac_1.JPG",
+			"sound": ""
+		},
+		{
+			"id": "1",
+			"picture": "unsplash_5255bf45a4a45_1.JPG",
+			"sound": ""
+		},
+		{
+			"id": "2",
+			"picture": "unsplash_5249ec183ab2c_1.JPG",
+			"sound": ""
+		},
+		{
+			"id": "3",
+			"picture": "unsplash_5263607dd1bfc_1.JPG",
+			"sound": ""
+		},
+		{
+			"id": "4",
+			"picture": "unsplash_5252b10dacd20_1.JPG",
+			"sound": ""
+		},
+		{
+			"id": "5",
+			"picture": "unsplash_527bf5fd7f5f6_1.JPG",
+			"sound": ""
+		},
+		{
+			"id": "6",
+			"picture": "unsplash_5269924c8ce7c_1.JPG",
+			"sound": ""
+		},
+		{
+			"id": "7",
+			"picture": "unsplash_5252bb51404f8_1.JPG",
+			"sound": ""
+		},
+		{
+			"id": "8",
+			"picture": "unsplash_525a7e89953d1_1.JPG",
+			"sound": ""
+		},
+		{
+			"id": "9",
+			"picture": "unsplash_52509afaba7b1_1.JPG",
+			"sound": ""
+		},
+		{
+			"id": "10",
+			"picture": "unsplash_5263605581e32_1.JPG",
+			"sound": ""
+		},
+		{
+			"id": "11",
+			"picture": "unsplash_5261cd0183e57_1.JPG",
+			"sound": ""
+		},
+	]
+}
